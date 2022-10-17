@@ -64,3 +64,9 @@ jobs:
           user-email: ${{ secrets.USER_EMAIL }}
           target-branch: main
           target-directory: bukkit
+
+      - name: Upload GitHub Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: Plugin Artifact
+          path: ./
